@@ -22,6 +22,12 @@ fn read_simple_test() {
     assert_eq!(buf.read_option::<u16>().unwrap(), Some(34));
 }
 
+#[test]
+fn cant_read_empty_buffer() {
+    let mut buf = ByteReader::from(&[][..]);
+    assert!(buf.peek_ahead(0).is_err())
+}
+
 // A more complex test that tests the reader with a struct.
 #[derive(BinaryIo)]
 pub struct TestPacket {
