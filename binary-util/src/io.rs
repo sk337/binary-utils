@@ -12,7 +12,7 @@ pub const ERR_VARINT_TOO_LONG: &str = "Varint is too long to be written to buffe
 
 macro_rules! can_read {
     ($self: ident, $size: expr) => {
-        $self.buf.remaining() >= $size
+        $self.buf.len() > 0 && $self.buf.remaining() >= $size
     };
 }
 
