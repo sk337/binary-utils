@@ -205,7 +205,7 @@ impl ByteReader {
     pub fn read_u24(&mut self) -> Result<u32, std::io::Error> {
         if can_read!(self, 3) {
             if let Ok(num) = self.read_uint(3) {
-                dbg!(num);
+                // dbg!(num);
                 return Ok(num as u32);
             } else {
                 return Err(Error::new(std::io::ErrorKind::UnexpectedEof, ERR_EOB));
