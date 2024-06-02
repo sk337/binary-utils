@@ -7,11 +7,6 @@ A panic-free binary utility crate to read/write binary streams over the wire.
 
 ---
 
-> [!WARNING]
-> Version `0.4.0` is the next major version of Binary Utils, and will fully remove the `Streamable`
-> trait, and replace it with `Reader` and `Writer`. This will be a breaking change, and will require
-> you to update your code to use the new `Reader` and `Writer` traits.
-
 # Packages
 This repository is split into two crates:
 * [`binary-util`](./binary-util) - The main crate.
@@ -206,10 +201,10 @@ fn main() {
 The [`types`](https://docs.rs/binary-util/latest/binary_utils/types) module provides a way to implement non-primitive types when using the [`BinaryIo`](https://docs.rs/binary-util/latest/binary_util/derive.BinaryIo.html) derive macro.
 
 This module provides the following helper types:
-* [`varu32`](https://docs.rs/binary-util/latest/binary_util/types/struct.varu32.html - An unsigned 32-bit variable length integer
-* [`vari32`](https://docs.rs/binary-util/latest/binary_util/types/struct.vari32.html - A signed 32-bit variable length integer
-* [`varu64`](https://docs.rs/binary-util/latest/binary_util/types/struct.varu64.html - An unsigned 64-bit variable length integer
-* [`vari64`](https://docs.rs/binary-util/latest/binary_util/types/struct.vari64.html - A signed 64-bit variable length integer
+* [`varu32`](https://docs.rs/binary-util/latest/binary_util/types/struct.varu32.html) - An unsigned 32-bit variable length integer
+* [`vari32`](https://docs.rs/binary-util/latest/binary_util/types/struct.vari32.html) - A signed 32-bit variable length integer
+* [`varu64`](https://docs.rs/binary-util/latest/binary_util/types/struct.varu64.html) - An unsigned 64-bit variable length integer
+* [`vari64`](https://docs.rs/binary-util/latest/binary_util/types/struct.vari64.html) - A signed 64-bit variable length integer
 * [`u24`](https://docs.rs/binary-util/latest/binary_util/types/struct.u24.html) - A 24-bit unsigned integer
 * [`i24`](https://docs.rs/binary-util/latest/binary_util/types/struct.i24.html) - A 24-bit signed integer
 * [`LE`](https://docs.rs/binary-util/latest/binary_util/types/struct.LE.html) - A little endian type
